@@ -9,5 +9,9 @@
         public string? EventDescription { get; set; }
 
         public string? EventImage { get; set; }
+
+        public string? EventLink { get; set; }
+
+        public DateTime? EventDate { get; set; }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using CapstoneProject.DTO;
 using CapstoneProject.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CapstoneProject.Controllers

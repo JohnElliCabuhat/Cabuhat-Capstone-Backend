@@ -33,13 +33,14 @@ public partial class CapstoneDbContext : DbContext
     {
         modelBuilder.Entity<Blog>(entity =>
         {
-            entity.HasKey(e => e.Bid).HasName("PK__Blogs__C6DE0D210078FDFE");
+            entity.HasKey(e => e.Bid).HasName("PK__Blogs__C6DE0D21FB618644");
 
             entity.Property(e => e.Bid)
                 .ValueGeneratedNever()
                 .HasColumnName("BID");
             entity.Property(e => e.BlogDescription).HasMaxLength(255);
-            entity.Property(e => e.BlogImage).HasMaxLength(75);
+            entity.Property(e => e.BlogImage).HasMaxLength(255);
+            entity.Property(e => e.BlogLink).HasMaxLength(255);
             entity.Property(e => e.BlogTitle).HasMaxLength(100);
         });
 
@@ -63,13 +64,15 @@ public partial class CapstoneDbContext : DbContext
 
         modelBuilder.Entity<Event>(entity =>
         {
-            entity.HasKey(e => e.Evid).HasName("PK__Events__E1CA58E5BB4BEF57");
+            entity.HasKey(e => e.Evid).HasName("PK__Events__E1CA58E505E3F480");
 
             entity.Property(e => e.Evid)
                 .ValueGeneratedNever()
                 .HasColumnName("EVID");
+            entity.Property(e => e.EventDate).HasColumnType("date");
             entity.Property(e => e.EventDescription).HasMaxLength(255);
-            entity.Property(e => e.EventImage).HasMaxLength(75);
+            entity.Property(e => e.EventImage).HasMaxLength(255);
+            entity.Property(e => e.EventLink).HasMaxLength(255);
             entity.Property(e => e.EventName).HasMaxLength(100);
         });
 
